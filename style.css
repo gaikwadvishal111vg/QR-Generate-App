@@ -1,0 +1,92 @@
+body{
+    background: darkgray;
+}
+*{
+
+}
+.container{
+    width:25rem;
+    padding: 1.56rem 2.19rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(63, 91, 100);
+    border-radius:2rem;
+}
+.container p{
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom:0.75rem ;
+}
+.container input{
+    width: 100%;
+    height: 3.13rem;
+    border: 0.15rem solid green;
+    outline: 0;
+    background: #ffffff;
+    margin: 1rem 0 2rem;
+    border-radius: 0.75rem;
+}
+.container input:hover{
+    background-color: rgba(0, 26, 255, 0.245);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: #494eea;
+    box-shadow: 0 0.50rem 0.50rem rgba(10, 10, 10, 0.5);
+}
+.container button{
+    width: 100%;
+    height: 3.13rem;
+    background: #494eea;
+    color: white;
+    border: 0;
+    outline: 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.50rem 0.50rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-weight: 500;
+}
+.container button:hover{
+    background-color: rgba(0, 255, 255, 0.268);
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0.50rem 0.50rem rgba(10, 10, 10, 0.5);
+}
+#qrcode{
+width: 12.50rem;
+border-radius: 0.75rem;
+max-height: 0;
+overflow: hidden;
+transition: ;
+}
+#qrcode img{
+width: 100%;
+padding: 0.50rem;
+}
+#qrcode.show-img{
+    max-height: 19rem;
+    margin: 0.75rem auto;
+    border: 0.50rem solid #d1d1d1;
+}.error{
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-0.13rem);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(0.13rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
+go to QR CODE API  SITE TO GENERATE QR CODE

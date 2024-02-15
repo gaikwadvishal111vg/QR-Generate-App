@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p>PLEASE ENTER TEXT OR URL</p>
+        <input type="text" placeholder="TEXT OR URL" id="qrtext">
+        <div id="qrcode">
+            <img src="" id="qrimage">
+        </div>
+        <button onclick="generateQr()">GENERATE QR CODE</button>
+    </div>
+
+
+
+    <script>
+        alert("QR CODE GENERATE APP");
+        
+let qrcode = document.getElementById("qrcode");
+let qrimage = document.getElementById("qrimage");
+let qrtext = document.getElementById("qrtext");
+
+        function generateQr(){
+            // if condition we used a we not enter any text or url not show any massage or qr 
+            if(qrtext.value.length > 0){
+            qrimage.src ="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrtext.value;
+
+            // this add for generate qr code a increase size of contaner
+            qrcode.classList.add("show-img");
+        } else {
+            // if you are not enter any text and click generate button then input text area are shake(10times) and shows error
+            qrtext.classList.add('error');
+            setTimeout(()=>{
+                // text area shake 10time then stop the shake or remove
+                qrtext.classList.remove('error');
+            },1000);
+        }
+        }    
+    </script>
+</body>
+</html>
